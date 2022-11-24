@@ -1,34 +1,19 @@
 import "./App.css";
 import Greet from "./components/Greet";
-import Person from "./components/Person";
-import PersonList from "./components/PersonList";
+import Heading from "./components/Heading";
+import Oscar from "./components/Oscar";
+import Status from "./components/Status";
 
 function App() {
-  const personName = {
-    first: "Kashyap",
-    last: "Kapdi",
-  };
-
-  const personNameList = [
-    {
-      first: "Kashyap",
-      last: "Kapdi",
-    },
-    {
-      first: "Chintan",
-      last: "Kapdi",
-    },
-    {
-      first: "Maitri",
-      last: "Kapdi",
-    },
-  ];
-
   return (
     <div className="App">
-      <Greet name="Kashyap" messageCount={20} isLoggedIn={true} />
-      <Person name={personName} />
-      <PersonList names={personNameList} />
+      <Status status="success" />
+      <Heading>Placeholder Text</Heading>
+      <Oscar>
+        <Heading>Oscar goes to RDJ</Heading>
+      </Oscar>
+
+      <Greet name="Kashyap" isLoggedIn={true} />
     </div>
   );
 }
